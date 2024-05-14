@@ -21,7 +21,8 @@ int main() {
                 "vui long chon 1 chuc nang: \n"
                 "1 - them mot so vao hang doi;\n "
                 "2 - lay mot so ra hang doi; \n"
-                "3 - kich thuoc cua hang doi hien tai. \n"
+                "3 - kich thuoc cua hang doi hien tai; \n"
+                "4 - display thong tin trong mang hien tai. \n"
                 "Vui long nhap lua chon cua ban: ";
         cin >> choice; // Đọc lựa chọn từ người dùng
         cout << "-----------------------------------" << endl;
@@ -55,6 +56,7 @@ int main() {
             } else {
                 // Lấy phần tử ở đầu hàng đợi
                 cout << "Xuat phan tu o dau hang doi la: " << arr[front] << endl;
+                arr[front] = -1; // gán -1 tương đương với rỗng để dễ thấy vị trí rỗng
                 front++; // Tăng chỉ số 'front' lên
                 if (front > 9) { // Nếu 'front' vượt quá kích thước mảng, đặt lại 'front' về 0
                     front = 0;
@@ -68,6 +70,16 @@ int main() {
             cout << "Kich thuoc cua hang doi hien tai la: " << currentSize << endl;
             cout << "-----------------------------------" << endl;
             continue; // Quay lại menu sau khi hiển thị kích thước
+        } else if (choice == 4) {
+            cout << "vi tri va gia tri phan tu hien tai trong mang la: " << endl;
+           for(int i = 0; i < 10; i++) {
+               cout << " [vi tri : " << i << ", gia tri: " << arr[i] << "]" << endl;
+           }
+           cout << "front dang o vi tri: " << front << endl;
+           cout << "back dang o vi tri: " << back << endl;
+           cout << "do lon hang doi hien tai: " << currentSize << endl;
+            cout << "-----------------------------------" << endl;
+            continue;
         } else {
             // Xử lý lựa chọn không hợp lệ
             cout << "Lua chon khong dung, vui long kiem tra lai." << endl;
