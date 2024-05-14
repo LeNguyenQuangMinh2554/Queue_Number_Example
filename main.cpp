@@ -12,6 +12,9 @@ int main() {
     int back = 0; // Chỉ số cuối của hàng đợi
     int currentSize = 0; // Độ lớn hiện tại của hàng đợi
     int arr[10]; // Mảng cố định có kích thước 10 để lưu các phần tử trong hàng đợi
+     for(int i = 0; i < 10; i++) {
+        arr[i] = -1;            // gán tất cả các ô đựng giá trị của mảng cho -1 để cho dễ nhìn.
+         }
     int choice; // Biến lưu lựa chọn của người dùng
 
     // Vòng lặp vô hạn để chương trình chạy liên tục cho đến khi người dùng dừng lại
